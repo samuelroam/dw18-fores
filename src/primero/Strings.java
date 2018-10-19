@@ -56,6 +56,9 @@ public class Strings {
 				nombre5=key.nextLine();
 			}
 			System.out.println("buenos dias");
+			break;
+		
+			
 		}
 	}
 

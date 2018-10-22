@@ -56,6 +56,12 @@ public class Menu {
 			break;
 			
 		case 3:
+			int numinv;
+			System.out.println("Introduce un numero");
+			numinv=scan.nextInt();
+			String invnum=String.valueOf(numinv);
+			StringBuilder numinver=new StringBuilder(invnum);
+			System.out.println(numinver);
 			break;
 		case 4:
 			break;

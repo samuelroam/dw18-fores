@@ -88,7 +88,8 @@ public class Menu {
 			boolean esBinario;
 			
 			do {
-			System.out.println("Introduce un numero binario");	
+			System.out.println("Introduce un numero binario");
+			numero=scan.nextLong();
 			esBinario=true;
 			aux=numero;
 			while (aux!=0) {
@@ -109,7 +110,11 @@ public class Menu {
 			}
 			System.out.println("Decimal: "+decimal);
 			break;
+			// http://puntocomnoesunlenguaje.blogspot.com/2014/11/pasar-de-binario-decimal-en-java.html
 		case 7:
+			
+			break;
+		case 8:
 			System.exit(0);
 			break;
 		default:

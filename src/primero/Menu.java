@@ -66,6 +66,18 @@ public class Menu {
 		case 4:
 			break;
 		case 5:
+			int numtri;
+			System.out.println("Introduce un numero");
+			numtri=scan.nextInt();
+			int count=0;
+			int j;
+			for (int i=0;i<numtri;i++) {
+				for (j=0;j<count;j++) {
+					System.out.print("*");
+				}
+				System.out.println();
+				count++;
+			}
 			break;
 		case 6:
 			break;

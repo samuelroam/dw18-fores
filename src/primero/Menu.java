@@ -13,11 +13,12 @@ public class Menu {
 		System.out.println("Introduce una opción");
 		System.out.println("1...Cuantos digitos tiene un numero?");
 		System.out.println("2...El digito aparece en el numero?");
-		System.out.println("3...Coming Soon");
+		System.out.println("3...Invertir numero");
 		System.out.println("4...Coming Soon");
-		System.out.println("5...Coming Soon");
-		System.out.println("6...Coming Soon");
-		System.out.println("7...Salir");
+		System.out.println("5...Triangulo");
+		System.out.println("6...Binario a decimal");
+		System.out.println("7...Contar vocales");
+		System.out.println("8...Salir");
 		int option = scan.nextInt();
 		
 		switch(option) {
@@ -112,7 +113,16 @@ public class Menu {
 			break;
 			// http://puntocomnoesunlenguaje.blogspot.com/2014/11/pasar-de-binario-decimal-en-java.html
 		case 7:
-			
+			System.out.println("Introduce una frase");
+			String frase;
+			frase=scan.nextLine();
+			int cont =0;
+			for (int i=0;i<frase.length();i++) {
+				if(frase.charAt(i)=='a' || frase.charAt(i)=='e' || frase.charAt(i)=='i' || frase.charAt(i)=='o' || frase.charAt(i)=='u') {
+					cont++;
+				}
+			}
+			System.out.println("Aparecen "+cont+" vocales");
 			break;
 		case 8:
 			System.exit(0);

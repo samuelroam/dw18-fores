@@ -24,26 +24,32 @@ public class Menu {
 		switch(option) {
 		case 1:
 			int numdig;
-			System.out.println("introduce un numero");
-			numdig = scan.nextInt();
+			
 			do {
 			System.out.println("Introduce uno positivo");
 			numdig = scan.nextInt();
 			}while(numdig<0);
+			
 			String dignum =String.valueOf(numdig);
-			System.out.println(dignum.length());
+			System.out.println();
+			System.out.println("El numero tiene "+dignum.length()+" digitos");
+			System.out.println();
+			System.out.println();
 			break;
 			
 		case 2:
 			int numydig;
-			System.out.println("introduce un numero");
-			numydig = scan.nextInt();
+			int dig;
 			do {
 			System.out.println("Introduce uno positivo");
 			numydig = scan.nextInt();
 			}while(numydig<0);
+			
+			do {
 			System.out.println("introduce un digito");
-			int dig = scan.nextInt();
+			dig = scan.nextInt();
+			}while(dig<0);
+			
 			String digynum = String.valueOf(numydig);
 			String digi = String.valueOf(dig);
 			char digit = digi.charAt(0);
@@ -53,13 +59,19 @@ public class Menu {
 					contador++;
 				}
 			}
-			System.out.println(contador);
+			System.out.println();
+			System.out.println("El digito "+dig+" aparece "+contador+" veces");
+			System.out.println();
+			System.out.println();
 			break;
 			
 		case 3:
 			int numinv;
+			do {
 			System.out.println("Introduce un numero");
 			numinv=scan.nextInt();
+			}while(numinv<0);
+			
 			String invnum=String.valueOf(numinv);
 			StringBuilder numinver=new StringBuilder(invnum);
 			System.out.println(numinver);
@@ -68,8 +80,10 @@ public class Menu {
 			break;
 		case 5:
 			int numtri;
+			do {
 			System.out.println("Introduce un numero");
 			numtri=scan.nextInt();
+			}while(numtri<0);
 			int count=0;
 			int j;
 			for (int i=0;i<numtri;i++) {

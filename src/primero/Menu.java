@@ -22,6 +22,7 @@ public class Menu {
 		int option = scan.nextInt();
 		
 		switch(option) {
+		
 		case 1:
 			int numdig;
 			
@@ -74,10 +75,26 @@ public class Menu {
 			
 			String invnum=String.valueOf(numinv);
 			StringBuilder numinver=new StringBuilder(invnum);
-			System.out.println(numinver);
+			System.out.println(numinver.reverse());
 			break;
+			
 		case 4:
+			int numfac;
+			
+			do {
+			System.out.println("Introduce un numero");
+			numfac=scan.nextInt();
+			}while(numfac<0);
+			while (numfac<1) {
+				long facto=1L;
+			for (int i=numfac;i>0;i--) {
+				facto=facto*i;
+			}
+			
+			System.out.println(numfac+" "+facto);
+			}
 			break;
+			
 		case 5:
 			int numtri;
 			do {
@@ -93,12 +110,17 @@ public class Menu {
 				System.out.println();
 				count++;
 			}
+			for (int k=numtri;k>0;k=k-1) {
+				for (int l=count;l>0;l=l-1) {
+					System.out.print("*");
+				}
+				System.out.println();
+				count=count-1;
+			}
 			break;
+			
 		case 6:
-			long numero;
-			long aux;
-			long digito;
-			long decimal;
+			long numero, aux, digito, decimal;
 			int exponente;
 			boolean esBinario;
 			
@@ -123,9 +145,12 @@ public class Menu {
 				exponente++;
 				numero=numero/10;
 			}
-			System.out.println("Decimal: "+decimal);
+			System.out.println();
+			System.out.println("El numero introducido en binario es "+decimal+" en decimal");
+			System.out.println();
 			break;
 			// http://puntocomnoesunlenguaje.blogspot.com/2014/11/pasar-de-binario-decimal-en-java.html
+			
 		case 7:
 			System.out.println("Introduce una frase");
 			String frase;
@@ -136,8 +161,9 @@ public class Menu {
 					cont++;
 				}
 			}
-			System.out.println("Aparecen "+cont+" vocales");
+			System.out.println("En el texto introducido aparecen "+cont+" vocales");
 			break;
+			
 		case 8:
 			System.exit(0);
 			break;

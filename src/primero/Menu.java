@@ -14,7 +14,7 @@ public class Menu {
 		System.out.println("1...Cuantos digitos tiene un numero?");
 		System.out.println("2...El digito aparece en el numero?");
 		System.out.println("3...Invertir numero");
-		System.out.println("4...Coming Soon");
+		System.out.println("4...Factorial");
 		System.out.println("5...Triangulo");
 		System.out.println("6...Binario a decimal");
 		System.out.println("7...Contar vocales");
@@ -85,14 +85,16 @@ public class Menu {
 			System.out.println("Introduce un numero");
 			numfac=scan.nextInt();
 			}while(numfac<0);
-			while (numfac<1) {
+			do {
 				long facto=1L;
-			for (int i=numfac;i>0;i--) {
-				facto=facto*i;
+				for (int i=numfac;i>0;i--) {
+					facto=facto*i;
+				}
+				System.out.println();
+				System.out.println("El factorial de "+numfac+" es "+facto);
+				System.out.println();
 			}
-			
-			System.out.println(numfac+" "+facto);
-			}
+			while (numfac<1);
 			break;
 			
 		case 5:

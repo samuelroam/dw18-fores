@@ -13,13 +13,13 @@ public class Metodos {
 		System.out.println("3...dibujar cuadrado de lado dado");
 		System.out.println("4...dibujar un rectangulo");
 		int opcion = scan.nextInt();
-		
+
 		int lado = 0;
 		int base = 0;
-		int altura =0;
-		
+		int altura = 0;
+
 		switch (opcion) {
-		
+
 		case 1:
 			System.out.println("amos a probar");
 			borrarPantalla();
@@ -29,24 +29,20 @@ public class Metodos {
 			break;
 		case 3:
 			System.out.println("introduce un valor para el lado del cuadrado");
-			lado=scan.nextInt();
+			lado = scan.nextInt();
 			dibujarCuadrado(lado);
 			break;
 		case 4:
 			System.out.print("introduce un valor para la base: ");
 			base = scan.nextInt();
 			System.out.print("introduce un valor para la altura: ");
-			altura=scan.nextInt();
+			altura = scan.nextInt();
 			dibujarCuadrado(base, altura);
 			break;
-			
+
 		}
 	}
 
-	
-	
-	
-	
 	public static void borrarPantalla() {
 		for (int i = 0; i < 15; i++) {
 
@@ -63,17 +59,19 @@ public class Metodos {
 			System.out.println();
 		}
 	}
+
 	public static void dibujarCuadrado(int lado) {
-		for (int i=0;i<lado;i++) {
-			for (int j=0;j<lado;j++) {
+		for (int i = 0; i < lado; i++) {
+			for (int j = 0; j < lado; j++) {
 				System.out.print("*");
 			}
 			System.out.println();
 		}
 	}
+
 	public static void dibujarCuadrado(int base, int altura) {
-		for (int i=0;i<altura;i++) {
-			for (int j=0;j<base;j++) {
+		for (int i = 0; i < altura; i++) {
+			for (int j = 0; j < base; j++) {
 				System.out.print("*");
 			}
 			System.out.println();

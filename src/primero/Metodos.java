@@ -6,12 +6,18 @@ public class Metodos {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+		Scanner letras = new Scanner(System.in);
+		for (;;) {
 		System.out.println("introduce una opcion");
 		System.out.println("1...borrar pantalla");
 		System.out.println("2...Dibujar cuadrado 3x3");
 		System.out.println("PARAMETROS");
 		System.out.println("3...dibujar cuadrado de lado dado");
 		System.out.println("4...dibujar un rectangulo");
+		System.out.println("5...calcular el numero menor");
+		System.out.println("6...primera letra");
+		System.out.println();
+		System.out.println("0...salir");
 		int opcion = scan.nextInt();
 
 		int lado = 0;
@@ -39,7 +45,26 @@ public class Metodos {
 			altura = scan.nextInt();
 			dibujarCuadrado(base, altura);
 			break;
+		case 5:
+			int num1=scan.nextInt();
+			int num2=scan.nextInt();
+			
+			System.out.println(numeroMenor(num1,num2));
+			break;
+		case 6:
+			String calc = letras.nextLine();
+			System.out.println(primeraLetra(calc));
+			break;
+		case 7:
+			String calc2 = letras.nextLine();
+			System.out.println(ultimaLetra(calc2));
+			break;
+			
+		case 0:
+			System.exit(0);
+			break;
 
+		}
 		}
 	}
 
@@ -76,6 +101,31 @@ public class Metodos {
 			}
 			System.out.println();
 		}
+	}
+	
+	public static int numeroMenor(int num1, int num2) {
+		int menor=0;
+		if (num1<num2) {
+			menor=num1;
+			
+		}else if(num2<num1) {
+			menor=num2;
+			
+		}
+		return menor;
+	}
+	
+	public static char primeraLetra(String calc) {
+		char primera=calc.charAt(0);
+		return primera;
+	}
+	
+	public static char ultimaLetra(String calc2) {
+		char ultima=0;
+		for (int i=0;i<calc2.length();i++) {
+			ultima=calc2.charAt(i);
+		}
+		return ultima;
 	}
 
 }
